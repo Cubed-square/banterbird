@@ -1,0 +1,19 @@
+/* style.css */
+
+body {
+    font-family: Helvetica;
+    background-image: linear-gradient(to right, blue , black);
+    padding: 20px;
+}
+
+#feed {
+    margin-top: 30px;
+}
+
+#postInput {
+    border-radius: 25px;
+    border: 2px solid #73AD21;
+    padding: 20px;
+    width: 200px;
+    height: 150px;
+}
