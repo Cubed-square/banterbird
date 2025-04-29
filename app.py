@@ -23,6 +23,9 @@ def add_post():
         json.dump(posts, file,indent=4)
     return jsonify({"status" : "Success"}),201
 
+@app.route('/login')
+def Login():
+    return render_template("login.html")
 
 if __name__ == '__main__':
     app.run(debug=True)
