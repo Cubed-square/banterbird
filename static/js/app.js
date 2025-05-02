@@ -43,3 +43,14 @@ function renderPost(post, isNew = false) {
       console.error("Error fetching posts:", error);
     }
   };
+
+  setInterval( async () => {
+    try {
+      const response = await fetch("/api/posts");
+      const posts = await response.json();
+      document.getElementById("feed").innerHTML = ""; // Clear the feed
+      posts.forEach((post) => renderPost(post));
+    } catch (error) {
+      console.error("Polling error:", error);
+    }
+  },5000);
